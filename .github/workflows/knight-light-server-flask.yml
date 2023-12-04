@@ -38,7 +38,7 @@ jobs:
   semgrep:
     runs-on: ubuntu-latest
     container:
-      image: artifactory.cloud.cms.gov/batcave-docker/devops-pipelines/pipeline-tools/semgrep:v1.24.1
+      image: returntocorp/semgrep
     steps:
       - name: Semgrep
         run: |
