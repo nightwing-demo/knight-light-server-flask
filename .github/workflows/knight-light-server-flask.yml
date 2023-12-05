@@ -45,3 +45,8 @@ jobs:
           mkdir -p ${ARTIFACT_FOLDER}/sast/
           semgrep ci --json > ${ARTIFACT_FOLDER}/sast/semgrep-sast-report.json || true
           cat ${ARTIFACT_FOLDER}/sast/semgrep-sast-report.json
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: gitleaks/gitleaks-action@v2.3.2
